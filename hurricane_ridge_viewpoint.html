@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panorama Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 100%;
+        height: 95vh;
+        overflow: hidden;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "autoLoad": true,
+    "hfov": 80.0,
+    "haov": 188.75,
+    "vaov": 48.88,
+    "vOffset": 0,
+    "yaw": 0,
+    "pitch": -5,
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "title": "Hurricane Ridge Viewpoint",
+    "author": "Frank Jiang",
+    "type": "multires",
+    "multiRes": {
+        "basePath": "./img/hurricane_ridge_viewpoint",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 7,
+        "cubeResolution": 21480
+    }
+});
+</script>
+
+</body>
+
+<a href="./index.html">Back</a>
+
+</html>
